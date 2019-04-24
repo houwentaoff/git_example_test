@@ -10,7 +10,9 @@
     [alias]
         st = status
     ```
-
+* 移除库中的文件
+  `git rm file1 file2 --cache` `git ls-files`
+  
 * 怎么合并分支到`master`
     - 在`.vim`中更新了`solarized`, 发现在`bundle/solarized`中存在2分支分别为`...5ce16744`和`master`，其中`744`为修改了本地文件，然后本地提交后的默认分支号,这时需要将该分支合并到`master`中并传到`github`上.
         + 切换到master分支 `git checkout master`
