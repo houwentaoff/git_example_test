@@ -12,7 +12,19 @@
     ```
 * 移除库中的文件
   `git rm file1 file2 --cache` `git ls-files`
-  
+* 在当前分支上新建新分支，并提交
+   + 在当前的develop分支上的修改暂存起来
+    `git stash` 
+   + 暂存修改后，在本地新建分支（add_feature1为新分支的名字）
+     `git checkout -b add_feature1`
+   + 将暂存的修改放到新建分支中
+     `git stash pop`
+   + 使用命令进行常规的add、commit步骤
+     `git add file1 file2 file3`
+      `git commit -a "修改内容"`
+   + 将提交的内容push到远程服务器(在远程也同步新建分支add_feature1)
+     `git push origin add_feature1`
+     
 * 怎么合并分支到`master`
     - 在`.vim`中更新了`solarized`, 发现在`bundle/solarized`中存在2分支分别为`...5ce16744`和`master`，其中`744`为修改了本地文件，然后本地提交后的默认分支号,这时需要将该分支合并到`master`中并传到`github`上.
         + 切换到master分支 `git checkout master`
