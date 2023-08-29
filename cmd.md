@@ -25,6 +25,13 @@
    + 将提交的内容push到远程服务器(在远程也同步新建分支add_feature1)
      `git push origin add_feature1`
      
+* user-develop分支合并到master分支（受权限控制，网页上merge）
+   + master分支 给user分支取名 `git checkout master` `git checkout -b user-develop`
+   + 经过一段时间user-develop开发后，`git stash`  `git checkout master; git pull` 更新master
+   + `git checkout user-develop;git stash pop` `git merge master` 合并master分支到user-develop上方便提交
+   + `git push orgin user-develop`
+   + 网页上 merge request（master）.
+         
 * 怎么合并分支到`master`
     - 在`.vim`中更新了`solarized`, 发现在`bundle/solarized`中存在2分支分别为`...5ce16744`和`master`，其中`744`为修改了本地文件，然后本地提交后的默认分支号,这时需要将该分支合并到`master`中并传到`github`上.
         + 切换到master分支 `git checkout master`
