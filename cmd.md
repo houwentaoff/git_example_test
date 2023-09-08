@@ -53,3 +53,7 @@
 
 * 从指定版本生成到现在版本的patch文件(比如要上传修改代码的补丁包)
     `git format-patch 35e4f319eec77aa19d5b04cf1efa14a5624b74ae` ->生成`001-ptp-1588.patch` 名字是自动生成的
+  
+* 打tag和push tag  
+     `git tag v1.0 -m "第一个tag." ; git push origin v1.0`
+  
